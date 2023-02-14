@@ -1,4 +1,5 @@
 "use strict"
+
 const prompt = require('prompt-sync')();
 let fs = require('fs');
 
@@ -76,9 +77,9 @@ function remover(palavras){
 function menu(){
      
      console.log(`\n1 - Listar palavras cadastradas
-2 - Cadastrar palavra
-3 - Remover palavra
-4 - Sair`)
+     2 - Cadastrar palavra\n
+     3 - Remover palavra\n
+     4 - Sair`)
      let ope = Number(prompt("Opção: "))
      console.log()
      return ope
