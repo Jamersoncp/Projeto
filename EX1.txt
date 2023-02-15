@@ -10,12 +10,12 @@ function carregar_palavras(){
      return JSON.parse(dados)
 }
 
-function salvar_palavra(palavras){
+function salvar_palavra(palavras) {
      let str = JSON.stringify(palavras)
      fs.writeFileSync(arq_palavras, str)
 }
 
-function cad_palavras(palavras){
+function cad_palavras(palavras) {
      let aux = false
      let palavra = "";
      while (palavra == ""){
@@ -41,17 +41,17 @@ function cad_palavras(palavras){
      }
 }
 
-function listar(palavras){
+function listar(palavras) {
      palavras = carregar_palavras()
      console.log("===PALAVRAS CADASTRADAS===")
-     for (let elemento of palavras){
+     for (let elemento of palavras) {
           console.log(`${elemento.palavra} : ${elemento.dica}`)
      }
 }
 
-function remover(palavras){
+function remover(palavras) {
      let palavra = ""
-     while(palavra == ""){
+     while(palavra == "") {
           palavra = prompt("Palavra que deseja remover ? : ")
      }
      console.log()
@@ -67,7 +67,7 @@ function remover(palavras){
      }
 }
 
-function menu(){
+function menu() {
      
      console.log(`\n1 - Listar palavras cadastradas
      2 - Cadastrar palavra\n
